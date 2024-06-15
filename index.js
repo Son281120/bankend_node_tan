@@ -11,10 +11,9 @@ app.use(cors({
   origin: "*"
 }));
 app.use('/api', router);
-const PORT = 4000;
 
 connectToDb();
 
-app.listen(PORT, () => {
-  console.log(`App is listening on http://localhost:${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`App is listening on post: ${process.env.PORT}`);
 });
